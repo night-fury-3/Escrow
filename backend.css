@@ -257,7 +257,7 @@ body{
 }
 @media (max-width: 1400px){
   .gjs-rowin{
-	flex-wrap:wrap;
+	  flex-wrap:wrap;
   }
   .gjs-cellLeft{
 	width:100%;
@@ -268,15 +268,21 @@ body{
 }
 @media (max-width: 960px){
   .gjs-row{
-	display:flex;
-	flex-wrap:wrap;
-	flex-direction:column;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+  }
+  .gjs-rowin{
+    padding: 12px 40px 44px 40px;
   }
   .form-control{
 	font-size:12px;
   }
 }
 @media (max-width: 575px){
+  .gjs-rowin{
+    padding: 0px 40px 44px 40px;
+  }
   #im5f{
 	padding:15px 0px 15px 0;
   }
