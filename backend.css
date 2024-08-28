@@ -36,7 +36,6 @@ body{
 .admin-title{
   color:white;
   width:100%;
-  margin:0 0 60px 0;
   display:flex;
   font-size:32px;
   align-items:flex-start;
@@ -255,7 +254,13 @@ body{
   background-position:left top;
   background-attachment:scroll;
 }
-@media (max-width: 1400px){
+@media (max-width: 1920px){
+  .admin-title {
+    padding-bottom: 60px;
+  }
+  .gjs-cell {
+    padding:60px 42px 214px 42px;
+  }
   .gjs-rowin{
 	  flex-wrap:wrap;
   }
@@ -267,6 +272,12 @@ body{
   }
 }
 @media (max-width: 960px){
+  .gjs-cell {
+    padding: 0px;
+  }
+  .admin-title {
+    padding: 32px 42px 24px 40px;
+  }
   .gjs-row{
     display:flex;
     flex-wrap:wrap;
@@ -280,24 +291,21 @@ body{
   }
 }
 @media (max-width: 575px){
-  .gjs-rowin{
-    padding: 0px 40px 44px 40px;
+  .gjs-cell {
+    padding: 0px;
   }
-  #im5f{
-	padding:15px 0px 15px 0;
+  .admin-title {
+    padding: 32px 16px;
+  }
+  .gjs-rowin{
+    padding: 0px 16px 40px 16px;
   }
   .admin-content{
 	width:100%;
 	padding:16px 16px 16px 16px;
   }
-  #ic7p{
-	padding:10px 0px 10px 0;
-  }
   #i82pd{
 	padding:15px 0px 15px 0;
-  }
-  #iv94{
-	padding:32px 16px 40px 16px;
   }
   .btn.btn-primary.mt-2{
 	width:50%;
