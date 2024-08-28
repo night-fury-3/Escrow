@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./backend.css" />
+    <title>Simple Web Page</title>
+  </head>
+  <body>
+	<div class="gjs-row">
+	  <div id="iv94" class="gjs-cell">
+		<div class="admin-title">Admin Panel
+		</div>
+		<div id="ic7p" class="gjs-rowin">
+		  <div id="im5f" class="gjs-cellLeft">
+			<div class="admin-content">
+			  <div id="contractstate" class="time-line">
+				<div class="information w-half">
+				  <div class="title">Total Funds In Escrow:
+				  </div>
+				  <div class="time-infor">
+					<div class="time">
+					  <span id="form-total-amount" class="fm-control">Amount</span>
+					  <span id="token-symbol" class="unit">USDT</span>
+					</div>
+				  </div>
+				</div>
+				<div class="information w-half">
+				  <div class="title">EndDate:
+				  </div>
+				  <div class="time-infor">
+					<div class="time">
+					  <span id="form-end-_date" class="fm-control">Date</span>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="admin-hour">
+			  <div class="time-big">
+				<div id="remaining-time1" class="remaining-time">
+				  <div id="time-hour-dis" class="time-hour1">
+					<div id="remaining-time-days" class="remaining-time-div">
+					  00
+					</div>
+					<div class="remaining-time-div">:
+					</div>
+					<div id="remaining-time-hour" class="remaining-time-div">
+					  00
+					</div>
+					<div class="remaining-time-div">:
+					</div>
+					<div id="remaining-time-min" class="remaining-time-div">
+					  00
+					</div>
+					<div class="remaining-time-div">:
+					</div>
+					<div id="remaining-time-sec" class="remaining-time-div">
+					  00
+					</div>
+				  </div>
+				</div>
+				<div id="remaining-time2" class="remaining-time">
+				  <div id="time-hour-dis-2" class="time-hour2">
+					<div id="remaining-time-days-2" class="remaining-time-divLetter">
+					  Days
+					</div>
+					<div id="remaining-time-hour-2" class="remaining-time-divLetter">
+					  Hrs
+					</div>
+					<div id="remaining-time-min-2" class="remaining-time-divLetter">
+					  Min
+					</div>
+					<div id="remaining-time-sec-2" class="remaining-time-divLetter">
+					  Sec
+					</div>
+				  </div>
+				</div>
+				<div id="contract-result" class="contract-history">
+				  <div id="result-title">Contract Expired
+				  </div>
+				</div>
+				<div class="cms">
+				  <div class="cms hidden">
+					<button id="start-date" type="button" data-form-name="startTime" class="btn btn-primary mt-2">
+					  StartDate
+					</button>
+					<span id="form-output-startTime-0" data-form-name="startTime" data-field-type="uint256" class="form-control">uint256</span>
+					<button id="end-date" type="button" data-form-name="endTime" class="btn btn-primary mt-2">
+					  EndTime
+					</button>
+					<span id="form-output-endTime-0" data-form-name="endTime" data-field-type="uint256">uint256</span>
+					<button id="total-amount" type="button" data-form-name="amount" class="btn btn-primary mt-2">
+					  TotalfundsinEscrow
+					</button>
+					<span id="form-output-amount-0" data-form-name="amount" data-field-type="uint256">uint256</span>
+					<button id="getchainId" type="button" data-form-name="getChainID" class="btn btn-primary mt-2">
+						Read
+					</button>
+					<span id="form-output-getChainID-0" data-form-name="getChainID" data-field-type="uint256">uint256</span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="admin-content">
+			  <div class="update-button">
+				<button id="contract-address-button" type="button" data-form-name="getContractAddress" class="btn btn-primary mt-2_hidden">
+				  EscrowContracAddress
+				</button>
+				<div class="title">
+				  Escrow Contract Address
+				</div>
+				<span id="form-output-getContractAddress-0" data-form-name="getContractAddress" data-field-type="address" class="form-control">Address
+				</span>
+				<button id="usdt-address-button" type="button" data-form-name="USDT" class="btn btn-primary mt-2_hidden">
+				  USDTAddress
+				</button>
+			  </div>
+			  <div class="update-button">
+				<div class="title">
+				  USDT Address
+				</div>
+				<span id="form-output-USDT-0" data-form-name="USDT" data-field-type="address" class="form-control">USDT Address</span>
+				<div class="title hidden">
+				  Approve Amount
+				</div>
+				<input id="form-input-approve-_amount" type="text" placeholder="Enter Approve Amount" data-form-name="approve" data-field-type="uint256" class="form-control hidden"/>
+			  </div>
+			</div>
+		  </div>
+		  <div id="i82pd" class="gjs-cellRight">
+			<div class="admin-content">
+			  <div class="depsit-title">
+				Initialize your Escrow
+			  </div>
+			  <div class="admin-deposit">
+				<div class="w-half">
+				  <div class="update-button">
+					<div class="title">Amount
+					</div>
+					<input id="form-input-deposit-_amount" type="text" placeholder="Enter Deposit Amount" data-form-name="deposit" data-field-type="uint256" class="form-control hidden"/>
+					<input id="form-input-depoamount" type="text" placeholder="Enter Deposit Amount" class="form-control"/>
+				  </div>
+				</div>
+				<div class="w-half">
+				  <div class="update-button">
+					<div class="title">
+					  Contract Period
+					</div>
+					<input id="form-input-deposit-_period" type="text" placeholder="Enter Contract Duration" data-form-name="deposit" data-field-type="uint256" class="form-control hidden"/>
+					<input id="form-input-depoperiod" type="datetime-local" placeholder="Enter Contract Duration" class="form-control"/>
+					<button id="deposit-button" type="button" data-form-name="deposit" class="btn btn-primary mt-2_hidden">
+					  Deposit
+					</button>
+					<button id="decimal" type="button" onclick="getDecimals()" class="btn btn-primary mt-2_hidden">
+					  Decimal
+					</button>
+				  </div>
+				</div>
+			  </div>
+			  <div class="individual-button">
+				<button id="depositToken-button" type="button" onclick="deposit()" class="btn btn-primary mt-2_left">
+				  Initiailize your Escrow
+				</button>
+			  </div>
+			</div>
+			<div class="admin-content">
+			  <div class="depsit-title">
+				Escrow Updates
+			  </div>
+			  <div class="update-button">
+				<div class="title">
+				  Add amount
+				</div>
+				<div class="content-flex">
+				  <div class="w-half">
+					<input id="form-input-addAmount" type="text" placeholder="Enter amount" data-field-type="uint256" class="form-control"/>
+					<input id="form-input-addAmount-_amount" type="text" placeholder="Enter Add Amount" data-form-name="addAmount" data-field-type="uint256" class="form-control hidden"/>
+				  </div>
+				  <div class="w-half">
+					<button id="increase-amount" type="button" data-form-name="addAmount" class="btn btn-primary mt-2_hidden">
+					  Add Amount
+					</button>
+					<button id="increaseAmount-button" type="button" onclick="addAmount()" disabled class="btn btn-primary mt-2">
+					  Increase Amount
+					</button>
+				  </div>
+				</div>
+			  </div>
+			  <div class="update-button">
+				<div class="title">Increase Period
+				</div>
+				<div class="content-flex">
+				  <div class="w-half">
+					<input id="form-input-addTime" type="datetime-local" placeholder="Enter Add Time" class="form-control"/>
+					<input id="form-input-addTime-_period" type="text" placeholder="Enter Add Time" data-form-name="addTime" data-field-type="uint256" class="form-control hidden"/>
+				  </div>
+				  <div class="w-half">
+					<button id="increase-duration" type="button" data-form-name="addTime" class="btn btn-primary mt-2_hidden">
+					  Increase Duration
+					</button>
+					<button id="increaseTime-button" type="buton" onclick="increasePeriod()" disabled class="btn btn-primary mt-2">
+					  Increase Duration
+					</button>
+				  </div>
+				</div>
+			  </div>
+			  <div class="update-button">
+				<div class="title">Release Amount
+				</div>
+				<div class="content-flex">
+				  <div class="w-half">
+					<input id="form-input-release" type="text" placeholder="Enter Release Amount" data-field-type="uint256" class="form-control"/>
+					<input id="form-input-release-_amount" type="text" placeholder="Enter Release Amount" data-form-name="release" data-field-type="uint256" class="form-control hidden"/>
+				  </div>
+				  <div class="w-half">
+					<button id="release-amount" type="button" data-form-name="release" class="btn btn-primary mt-2_hidden">
+					  Release
+					</button>
+					<button id="release-button" type="button" onclick="releaseAmount()" disabled class="btn btn-primary mt-2">
+					  Release
+					</button>
+				  </div>
+				</div>
+				<button id="refund-fund" type="button" data-form-name="refund" class="btn btn-primary mt-2_hidden">
+				  Refund
+				</button>
+			  </div>
+			</div>
+			<div class="individual-button">
+			  <button id="refund-button" type="button" onclick="refund()" disabled class="btn btn-primary mt-2_left">
+				Refund
+			  </button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<script src="https://cdn.ethers.io/lib/ethers-5.7.1.esm.min.js"></script>
+	<script>
+	  let remainTime = 0;
+	  let decimal = 0;
+	  let endUnixTimestamp = 0;
+	  document.addEventListener("DOMContentLoaded", function() {
+		// Set a timeout to click the buttons after 500 milliseconds
+		setTimeout(() => {
+		  document.getElementById("contract-address-button").click();
+		  document.getElementById("usdt-address-button").click();
+		  document.getElementById("getchainId").click();
+		  console.log("GetCahinid is clicked------------->");
+		}
+				   , 500);
+		setTimeout(() => {
+		  document.getElementById("decimal").click();
+		}
+				   , 4000);
+	  }
+							   );
+	  async function approveEscrow() {
+		console.log("approve ERC20 button is clicked");
+		const abi = [
+		  {
+			inputs: [
+			  {
+				internalType: "address",
+				name: "spender",
+				type: "address",
+			  }
+			  ,
+			  {
+				internalType: "uint256",
+				name: "amount",
+				type: "uint256",
+			  }
+			  ,
+			],
+			name: "approve",
+			outputs: [
+			  {
+				internalType: "bool",
+				name: "",
+				type: "bool",
+			  }
+			  ,
+			],
+			stateMutability: "nonpayable",
+			type: "function",
+		  }
+		  ,
+		];
+		const provider = new ethers.providers.Web3Provider(this.parent.ethereum);
+		let signer = provider.getSigner();
+		const tokenAddress = document.getElementById("form-output-USDT-0").innerHTML;
+		console.log("Token Address : " + tokenAddress);
+		const contract = new ethers.Contract(tokenAddress, abi, signer);
+		const approvedAddress = document.getElementById(
+		  "form-output-getContractAddress-0"
+		).innerHTML;
+		console.log("Escrow Contract Address : " + approvedAddress);
+		const amount = document.getElementById(
+		  "form-input-approve-_amount"
+		).value;
+		console.log("token amount : " + amount);
+		// Call the approve function
+		try {
+		  const approveTx = await contract.approve(approvedAddress, amount);
+		  const receipt = await approveTx.wait();
+		  if (receipt.status === 0) {
+			return false;
+		  }
+		  console.log("successfully approved");
+		  alert("Successfully approved!");
+		  await handleDeposit();
+		  console.log("Deopsit button is clicked.")
+		  return true;
+		}
+		catch (err) {
+		  console.log("metamask:", err);
+		  alert("Approve transaction was failed.");
+		  return false;
+		}
+	  }
+	  document.addEventListener('DOMContentLoaded', (event) => {
+		const depoperiodInput = document.getElementById('form-input-depoperiod');
+		const addTimeInput = document.getElementById('form-input-addTime');
+		function setMinDateTime(input) {
+		  const now = new Date();
+		  now.setSeconds(0, 0);
+		  const localISOString = now.toISOString().slice(0, 16);
+		  input.min = localISOString;
+		}
+		function ensureSecondsZero(input) {
+		  input.addEventListener('change', function() {
+			const date = new Date(this.value);
+			date.setSeconds(0, 0);
+			// Set seconds and milliseconds to 0
+			const year = date.getFullYear();
+			const month = (date.getMonth() + 1).toString().padStart(2, '0');
+			const day = date.getDate().toString().padStart(2, '0');
+			const hours = date.getHours().toString().padStart(2, '0');
+			const minutes = date.getMinutes().toString().padStart(2, '0');
+			this.value = `${year}-${month}-${day}T${hours}:${minutes}`;
+		  }
+								);
+		}
+		setMinDateTime(depoperiodInput);
+		setMinDateTime(addTimeInput);
+		ensureSecondsZero(depoperiodInput);
+		ensureSecondsZero(addTimeInput);
+		setInterval(() => {
+		  setMinDateTime(depoperiodInput);
+		  setMinDateTime(addTimeInput);
+		}
+					, 60000);
+	  }
+							   )
+	  async function approveAddEscrow() {
+		console.log("approve ERC20 button is clicked");
+		const abi = [
+		  {
+			inputs: [
+			  {
+				internalType: "address",
+				name: "spender",
+				type: "address",
+			  }
+			  ,
+			  {
+				internalType: "uint256",
+				name: "amount",
+				type: "uint256",
+			  }
+			  ,
+			],
+			name: "approve",
+			outputs: [
+			  {
+				internalType: "bool",
+				name: "",
+				type: "bool",
+			  }
+			  ,
+			],
+			stateMutability: "nonpayable",
+			type: "function",
+		  }
+		  ,
+		];
+		const provider = new ethers.providers.Web3Provider(this.parent.ethereum);
+		let signer = provider.getSigner();
+		const tokenAddress = document.getElementById("form-output-USDT-0").innerHTML;
+		console.log("Token Address : " + tokenAddress);
+		const contract = new ethers.Contract(tokenAddress, abi, signer);
+		const approvedAddress = document.getElementById(
+		  "form-output-getContractAddress-0"
+		).innerHTML;
+		console.log("Escrow Contract Address : " + approvedAddress);
+		const amount = document.getElementById(
+		  "form-input-approve-_amount"
+		).value;
+		console.log("token amount : " + amount);
+		// Call the approve function
+		try {
+		  const approveTx = await contract.approve(approvedAddress, amount);
+		  const receipt = await approveTx.wait();
+		  if (receipt.status === 0) {
+			return false;
+			alert("Approve transaction was failed");
+		  }
+		  else {
+			console.log("successfully approved");
+			alert("Successfully approved!");
+			handleAddAmount();
+			return true;
+		  }
+		}
+		catch (err) {
+		  console.log("metamask:", err);
+		  alert("Approve transaction was failed.");
+		  return false;
+		}
+	  }
+	  async function getDecimals() {
+		const abi = [
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "decimals",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "uint8"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  }
+		  ,
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "symbol",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "string"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  }
+		];
+		const provider = new ethers.providers.Web3Provider(this.parent.ethereum);
+		let signer = provider.getSigner();
+		const tokenAddress = document.getElementById("form-output-USDT-0").innerHTML;
+		console.log("Token Address : " + tokenAddress);
+		const contract = new ethers.Contract(tokenAddress, abi, signer);
+		try {
+		  const decimals = await contract.decimals();
+		  const symbol = await contract.symbol();
+		  console.log("decimals : " + decimals);
+		  console.log("Token symbol :" + symbol);
+		  document.getElementById("token-symbol").innerText = symbol;
+		  decimal = decimals;
+		  setTimeout(() => {
+			document.getElementById("total-amount").click();
+			document.getElementById("start-date").click();
+			document.getElementById("end-date").click();
+			console.log("button click-------->");
+		  }
+					 , 500);
+		  setTimeout(function() {
+			fetchDepositStatus();
+		  }, 1000);
+		}
+		catch(error) {
+		  console.log(`Failed fetching decimals : ${error}
+  `)
+		}
+	  };
+	  console.log("decimal : " + decimal);
+	  document.getElementById("total-amount").addEventListener("click", function() {
+		setTimeout(() => {
+		  totalFund();
+		}
+				   , 4000);
+	  }
+															  )
+	  document.getElementById("end-date").addEventListener("click", function() {
+		setTimeout(() => {
+		  convertTime();
+		}
+				   , 3500);
+	  }
+														  );
+	  document.getElementById("total-amount").addEventListener("click", function() {
+		setTimeout(() => {
+		  updateButton();
+		}
+				   , 7000)
+	  }
+															  )
+	  function deposit() {
+		const depositValue = document.getElementById("form-input-depoamount").value;
+		const depositAmount = ethers.utils.parseUnits(depositValue, decimal);
+		document.getElementById("form-input-deposit-_amount").value = depositAmount;
+		document.getElementById("form-input-approve-_amount").value = depositAmount;
+		console.log("Deposit Amount : " + depositAmount);
+		const endDate = document.getElementById("form-input-depoperiod").value;
+		const targetEndDate = new Date(endDate);
+		targetEndDate.setSeconds(0, 0);
+		const targetUnixTimestamp = Math.floor(targetEndDate.getTime() / 1000);
+		const currentUnixTimestamp = Math.floor(Date.now() / 1000);
+		const depoDuration = targetUnixTimestamp - currentUnixTimestamp;
+		endUnixTimestamp = targetUnixTimestamp;
+		document.getElementById("form-input-deposit-_period").value = depoDuration;
+		console.log("Contract Duration : " + depoDuration);
+		if (depoDuration > 0) {
+		  setTimeout(function() {
+			approveEscrow();
+		  }
+					 , 500);
+		}
+		else{
+		  alert ("You have to input correct date.");
+		}
+	  }
+	  function addAmount() {
+		const addValue = document.getElementById("form-input-addAmount").value;
+		// Check if the input is empty or not a valid number
+		if (!addValue || isNaN(parseFloat(addValue)) || parseFloat(addValue) <= 0) {
+		  alert("You cannot increase the amount with 0 tokens");
+		  return;
+		}
+		const addAmount = ethers.utils.parseUnits(addValue, decimal);
+		document.getElementById("form-input-addAmount-_amount").value = addAmount;
+		document.getElementById("form-input-approve-_amount").value = addAmount;
+		console.log("Add Amount : " + addAmount);
+		setTimeout(function() {
+		  approveAddEscrow();
+		}
+				   , 500);
+	  }
+	  async function handleAddAmount() {
+		const provider = new ethers.providers.Web3Provider(this.parent.ethereum);
+		const signer = provider.getSigner();
+		const escrowAddress = document.getElementById("form-output-getContractAddress-0").innerHTML;
+		const abi = [
+		  {
+			"inputs": [
+			  {
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			  }
+			],
+			"name": "addAmount",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  }
+		  ,
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": false,
+				"internalType": "string",
+				"name": "eventName",
+				"type": "string"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_timestamp",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_endTime",
+				"type": "uint256"
+			  }
+			],
+			"name": "addAmountMade",
+			"type": "event"
+		  }
+		];
+		const escrowContract = new ethers.Contract(escrowAddress, abi, signer);
+		try {
+		  const tx = await escrowContract.addAmount(document.getElementById("form-input-addAmount-_amount").value);
+		  console.log("Transaction sent:", tx.hash);
+		  // Wait for the transaction to be mined
+		  const receipt = await tx.wait();
+		  console.log("Transaction mined:", receipt.transactionHash);
+		  // Check if the transaction was successful
+		  if (receipt.status === 1) {
+			console.log("successfully added");
+			alert("Escrow token amount was successfully increased");
+			setTimeout(function() {
+			  document.getElementById("total-amount").click();
+			  console.log("Button is clicked after token added")
+			}
+					   , 2000);
+		  }
+		  else {
+			console.log("failed to add amount");
+		  }
+		}
+		catch (err) {
+		  console.log("Failed to handle the event");
+		}
+	  }
+	  async function releaseAmount() {
+		const totalAmount = ethers.BigNumber.from(document.getElementById("form-output-amount-0").innerHTML);
+		const relAmount = document.getElementById("form-input-release").value;
+		if (!relAmount || parseFloat(relAmount) <= 0) {
+		  alert("You cannot release 0 tokens");
+		  return;
+		}
+		const sendAmount = ethers.utils.parseUnits(relAmount, decimal);
+		document.getElementById("form-input-release-_amount").value = sendAmount.toString();
+		console.log("Release Amount : " + sendAmount.toString());
+		if (sendAmount.lte(totalAmount)) {
+		  await handleRelease(sendAmount);
+		}
+		else {
+		  alert("Not enough funds in Escrow to release");
+		}
+	  }
+	  var acc = document.getElementsByClassName("accordion");
+	  for (var i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+		  this.classList.toggle("active");
+		  var panel = this.nextElementSibling;
+		  if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		  }
+		  else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		  }
+		}
+							   );
+	  }
+	  async function handleRelease(amount) {
+		const provider = new ethers.providers.Web3Provider(this.parent.ethereum);
+		let signer = provider.getSigner();
+		const escrowAddress = document.getElementById("form-output-getContractAddress-0").innerHTML;
+		const abi = [
+		  {
+			"inputs": [
+			  {
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			  }
+			],
+			"name": "release",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  }
+		  ,
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": false,
+				"internalType": "string",
+				"name": "eventName",
+				"type": "string"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_timestamp",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_endTime",
+				"type": "uint256"
+			  }
+			],
+			"name": "releaseMade",
+			"type": "event"
+		  }
+		];
+		const escrowContract = new ethers.Contract(escrowAddress, abi, signer);
+		try {
+		  const tx = await escrowContract.release(amount);
+		  console.log("Transaction sent:", tx.hash);
+		  // Wait for the transaction to be mined
+		  const receipt = await tx.wait();
+		  console.log("Transaction mined:", receipt.transactionHash);
+		  // Check if the transaction was successful
+		  if (receipt.status === 1) {
+			console.log("Amount released successfully!");
+			alert("Tokens successfully released");
+			setTimeout(function() {
+			  document.getElementById("total-amount").click();
+			}
+					   , 2000);
+		  }
+		  else {
+			console.log("Failed to release fund");
+			alert("Failed to release tokens");
+		  }
+		}
+		catch (error) {
+		  console.error("Failed to fetch the event:", error);
+		  alert("An error occurred while releasing tokens");
+		}
+	  }
+	  async function refund() {
+		const currentUnixTimestamp = Math.floor(Date.now() / 1000);
+		const remainingTime = endUnixTimestamp - currentUnixTimestamp;
+		if (remainingTime > 0) {
+		  alert ("Contract is active now.You can refund your assets after contract ended.")
+		}
+		else {
+		  handleRefund();
+		}
+	  }
+	  async function handleRefund() {
+		const provider = new ethers.providers.Web3Provider(this.parent.ethereum);
+		let signer = provider.getSigner();
+		const escrowAddress = document.getElementById("form-output-getContractAddress-0").innerHTML;
+		const abi = [
+		  {
+			"inputs": [],
+			"name": "refund",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  }
+		  ,
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": false,
+				"internalType": "string",
+				"name": "eventName",
+				"type": "string"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_timestamp",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_endTime",
+				"type": "uint256"
+			  }
+			],
+			"name": "refundMade",
+			"type": "event"
+		  }
+		];
+		const escrowContract = new ethers.Contract(escrowAddress, abi, signer);
+		try {
+		  const tx = await escrowContract.refund();
+		  console.log("Refund transaction sent:", tx.hash);
+		  const receipt = await tx.wait();
+		  if(receipt.status === 1) {
+			console.log("successfully refunded");
+			alert ("Tokens have successfully been refunded");
+			setTimeout(function() {
+			  document.getElementById("total-amount").click();
+			}
+					   , 2000);
+		  }
+		  else {
+			console.log("Failed to refund");
+		  }
+		}
+		catch (err) {
+		  console.log("failed to fetch the event");
+		}
+	  }
+	  function totalFund() {
+		const totalAmount = document.getElementById("form-output-amount-0").innerHTML;
+		console.log("totalamount :" + totalAmount, ":", decimal);
+		const correctTotal = Number(totalAmount) / (10 ** decimal);
+		console.log("Total Funds : " + totalAmount);
+		document.getElementById("form-total-amount").innerHTML = correctTotal;
+	  }
+	  function increasePeriod() {
+		const finalDate = document.getElementById("form-input-addTime").value;
+		const newEndDate = new Date(finalDate);
+		newEndDate.setSeconds(0, 0);
+		const newTargetUnixTimestamp = Math.floor(newEndDate.getTime() / 1000);
+		const incPeriod = newTargetUnixTimestamp - endUnixTimestamp;
+		console.log("New EndTime : " + newTargetUnixTimestamp);
+		console.log("Last EndTime : " + endUnixTimestamp);
+		document.getElementById("form-input-addTime-_period").value = incPeriod;
+		console.log("Increase period : " + incPeriod);
+		if (incPeriod > 0) {
+		  handleIncPeriod(incPeriod);
+		  console.log("handleIncPeriod is called ---------------> ");
+		}
+		else {
+		  alert("Please set correct duration.");
+		}
+	  }
+	  async function handleIncPeriod(incPeriod) {
+		const provider = new ethers.providers.Web3Provider(this.parent.ethereum);
+		let signer = provider.getSigner();
+		const escrowAddress = document.getElementById("form-output-getContractAddress-0").innerHTML;
+		const abi = [
+		  {
+			"inputs": [
+			  {
+				"internalType": "uint256",
+				"name": "_period",
+				"type": "uint256"
+			  }
+			],
+			"name": "addTime",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  }
+		  ,
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": false,
+				"internalType": "string",
+				"name": "eventName",
+				"type": "string"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_period",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_timestamp",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_endTime",
+				"type": "uint256"
+			  }
+			],
+			"name": "addTimeMade",
+			"type": "event"
+		  }
+		];
+		const escrowContract = new ethers.Contract(escrowAddress, abi, signer);
+		try {
+		  // Send the transaction to increase the period
+		  const tx = await escrowContract.addTime(incPeriod);
+		  console.log("Transaction sent:", tx.hash);
+		  // Wait for the transaction to be mined
+		  const receipt = await tx.wait();
+		  console.log("Transaction mined:", receipt.transactionHash);
+		  if (receipt.status === 1) {
+			console.log("Successfully Increased!");
+			alert("Escrow duration was successfully increased");
+			setTimeout(() => {
+			  document.getElementById("start-date").click();
+			  document.getElementById("end-date").click();
+			}
+					   , 500);
+		  }
+		  else {
+			console.log("Duration increasing failed");
+		  }
+		}
+		catch (err) {
+		  console.log("Failed Duration Period!", err);
+		}
+	  }
+	  let countDownInterval;
+	  console.log("Remaining time : " + remainTime);
+	  function convertTime() {
+		function formatDate(timestamp) {
+		  const date = new Date(timestamp);
+		  const hours = date.getUTCHours().toString().padStart(2, '0');
+		  const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+		  const day = date.getUTCDate();
+		  const month = date.toLocaleString('en-US', {
+			month: 'short', timeZone: 'UTC' }
+										   );
+		  const year = date.getUTCFullYear();
+		  return `${hours}:${minutes}GMT, ${day} ${month} ${year}`;
+		}
+		const startTimeElement = document.getElementById("form-output-startTime-0").innerHTML;
+		const startTimeStr = startTimeElement.trim();
+		const startTime = parseInt(startTimeStr, 10) * 1000;
+		console.log(startTime);
+		const startTimeUTC = new Date(startTime).toUTCString();
+		console.log(startTimeUTC);
+		const endTimeElement = document.getElementById("form-output-endTime-0").innerHTML;
+		const endTimeStr = endTimeElement.trim();
+		const endTime = parseInt(endTimeStr, 10) * 1000;
+		endUnixTimestamp = endTime / 1000;
+		// Update the global endUnixTimestamp variable
+		const endTimeUTC = new Date(endTime).toUTCString();
+		const now = Date.now();
+		console.log(endTimeUTC);
+		// Always display the start and end dates
+		if (endTime <= 0 || isNaN(endTime)) {
+		  document.getElementById("form-end-_date").innerHTML = "Escrow not initialized yet.";
+		}
+		else if (now > endTime) {
+		  document.getElementById("form-end-_date").innerHTML = "Contract has expired.";
+		}
+		else {
+		  document.getElementById("form-end-_date").innerHTML = formatDate(endTime);
+		}
+		if (endTime > 0) {
+		  // Clear any existing interval
+		  if (countDownInterval) {
+			clearInterval(countDownInterval);
+		  }
+		  // Set up the interval to update the countdown
+		  countDownInterval = setInterval(function() {
+			const currentUTCTimeInMilliseconds = Date.now();
+			const remainingTimeInMilliseconds = endTime - currentUTCTimeInMilliseconds;
+			let remainingDays = Math.floor(remainingTimeInMilliseconds / (1000 * 60 * 60 * 24));
+			let remainingHours = Math.floor((remainingTimeInMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			let remainingMinutes = Math.floor((remainingTimeInMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
+			let remainingSeconds = Math.floor((remainingTimeInMilliseconds % (1000 * 60)) / 1000);
+			// Ensure leading zeros for single-digit values
+			remainingDays = String(remainingDays).padStart(2, '0');
+			remainingHours = String(remainingHours).padStart(2, '0');
+			remainingMinutes = String(remainingMinutes).padStart(2, '0');
+			remainingSeconds = String(remainingSeconds).padStart(2, '0');
+			// Update HTML elements with formatted time
+			document.getElementById("remaining-time-days").innerHTML = remainingDays;
+			document.getElementById("remaining-time-hour").innerHTML = remainingHours;
+			document.getElementById("remaining-time-min").innerHTML = remainingMinutes;
+			document.getElementById("remaining-time-sec").innerHTML = remainingSeconds;
+			if (remainingTimeInMilliseconds <= 0) {
+			  clearInterval(countDownInterval);
+			  // Stop the countdown
+			  document.getElementById("remaining-time1").style.display = "none";
+			  document.getElementById("contract-result").style.display = "flex";
+			  document.getElementById("remaining-time2").style.display = "none";
+			  const totalAmount = document.getElementById("form-output-amount-0").innerHTML;
+			  console.log("Total Fund : " + totalAmount);
+			  if(totalAmount > 0) {
+				document.getElementById("refund-button").disabled = false;
+			  }
+			  else {
+				document.getElementById("refund-button").disabled = true;
+			  }
+			}
+		  }
+										  , 1000);
+		}
+		else {
+		  document.getElementById("remaining-time-days").innerHTML = '00';
+		  document.getElementById("remaining-time-hour").innerHTML = '00';
+		  document.getElementById("remaining-time-min").innerHTML = '00';
+		  document.getElementById("remaining-time-sec").innerHTML = '00';
+		}
+	  }
+	  function getCurrentContractAddress() {
+		return document.getElementById("form-output-getContractAddress-0").innerHTML;
+	  }
+	  function updateButtonStates(depositSuccessful) {
+		setTimeout(() => {
+		  const contractAddress = getCurrentContractAddress();
+		  document.getElementById("depositToken-button").disabled = depositSuccessful;
+		  document.getElementById("increaseTime-button").disabled = !depositSuccessful;
+		  document.getElementById("release-button").disabled = !depositSuccessful;
+		  document.getElementById("increaseAmount-button").disabled = !depositSuccessful;
+		  saveButtonStates(contractAddress, depositSuccessful);
+		}
+				   , 2000);
+	  }
+	  async function fetchDepositStatus() {
+		console.log("Fetchdeposit is called---------->");
+		const abi = [
+        {
+            "inputs": [],
+            "name": "isDepositExecuted",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ];
+		try {
+		  const chainId = document.getElementById("form-output-getChainID-0").innerHTML;
+		  console.log("ChainId :" + chainId);
+		  const ETHERSCAN_API_KEY = 'SEIYVZ5748VEMBUAJ1WZZ25USEUYBMJKKT';
+		  // Replace with your actual Etherscan API key
+		  const networkMap = {
+			'1': 'mainnet',
+			'3': 'ropsten',
+			'4': 'rinkeby',
+			'5': 'goerli',
+			'42': 'kovan',
+			'11155111': 'sepolia'
+		  };
+		  const network = networkMap[chainId] || 'mainnet';
+		  const provider = new ethers.providers.EtherscanProvider(network, ETHERSCAN_API_KEY);
+		  const escrowAddress = document.getElementById("form-output-getContractAddress-0").innerHTML;
+		  console.log("escrowAddress : " + escrowAddress);
+		  const contract = new ethers.Contract(escrowAddress, abi, provider);
+		  console.log("Contract : " + contract);
+		  const depositExecuted = await contract.isDepositExecuted();
+		  console.log("It is passed------------->");
+		  // Check if the deposit has been made
+		  if(depositExecuted) {
+			updateButtonStates(true);
+		  }
+		  else {
+			console.log("Deposit is not excuted successfully");
+			updateButtonStates(false);
+		  }
+		}
+		catch (error) {
+		  console.error("An error occurred while fetching deposit status", error);
+		}
+	  }
+	  async function handleDeposit() {
+		const provider = new ethers.providers.Web3Provider(this.parent.ethereum);
+		let signer = provider.getSigner();
+		const escrowAddress = document.getElementById("form-output-getContractAddress-0").innerHTML;
+		const escrowAbi = [
+		  // Add your escrow contract ABI here
+		  {
+			"inputs": [
+			  {
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			  }
+			  ,
+			  {
+				"internalType": "uint256",
+				"name": "_period",
+				"type": "uint256"
+			  }
+			],
+			"name": "deposit",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  }
+		];
+		const escrowContract = new ethers.Contract(escrowAddress, escrowAbi, signer);
+		try {
+		  const depositTx = await escrowContract.deposit(
+			document.getElementById("form-input-deposit-_amount").value,
+			document.getElementById("form-input-deposit-_period").value
+		  );
+		  const receipt = await depositTx.wait();
+		  if (receipt.status === 1) {
+			console.log("Deposit successful!");
+			alert("Deposit was successful!");
+			// Update the UI or perform other actions as needed
+			document.getElementById("depositToken-button").disabled = true;
+			// Enable the other buttons
+			document.getElementById("increaseTime-button").disabled = false;
+			document.getElementById("release-button").disabled = false;
+			document.getElementById("increaseAmount-button").disabled = false;
+			updateButtonStates(true);
+			setTimeout(() => {
+			  document.getElementById("total-amount").click();
+			  document.getElementById("start-date").click();
+			  document.getElementById("end-date").click();
+			}
+					   , 1500);
+		  }
+		  else {
+			console.log("Deposit failed!");
+			alert("Deposit failed. Please try again.");
+		  }
+		}
+		catch (error) {
+		  console.error("Error during deposit:", error);
+		  alert("An error occurred during deposit. Please check the console for details.");
+		}
+	  }
+	  function updateButton() {
+		const totalAmount = document.getElementById("form-output-amount-0").innerHTML;
+		const startTimeElement = document.getElementById("form-output-startTime-0").innerHTML;
+		const startTimeStr = startTimeElement.trim();
+		const startTime = parseInt(startTimeStr, 10) * 1000;
+		console.log(startTime);
+		const startTimeUTC = new Date(startTime).toUTCString();
+		console.log(startTimeUTC);
+		const endTimeElement = document.getElementById("form-output-endTime-0").innerHTML;
+		const endTimeStr = endTimeElement.trim();
+		const endTime = parseInt(endTimeStr, 10) * 1000;
+		endUnixTimestamp = endTime / 1000;
+		// Update the global endUnixTimestamp variable
+		const endTimeUTC = new Date(endTime).toUTCString();
+		const now = Date.now();
+		console.log(endTimeUTC);
+		const currentUTCTimeInMilliseconds = Date.now();
+		const remainingTimeInMilliseconds = endTime - currentUTCTimeInMilliseconds;
+		let remainTime = remainingTimeInMilliseconds;
+		if(totalAmount > 0) {
+		  document.getElementById("release-button").disabled = false;
+		  if(remainTime <= 0) {
+			console.log("Remain Time:" + remainTime);
+			document.getElementById("refund-button").disabled = false;
+		  }
+		  else {
+			document.getElementById("refund-button").disabled = true;
+		  }
+		}
+		else {
+		  document.getElementById("release-button").disabled = true;
+		  document.getElementById("refund-button").disabled = true;
+		}
+	  }
+	</script>
+  </body>
+</html>
