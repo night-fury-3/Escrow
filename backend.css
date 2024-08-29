@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
 body {
   margin: 0;
 }
@@ -61,18 +64,20 @@ body {
 }
 .btn.btn-primary.mt-2 {
   color: white;
+  opacity: 1;
   width: 50%;
   border: solid 2px;
   display: block;
   padding: 12px 16px;
-  font-size: 16px;
+  font-size: 20px;
   align-items: center;
   border-color: #41378d;
   border-radius: 8px;
-  background-color: #41378d;
+  background-color: #2b2747;
 }
 .btn.btn-primary.mt-2_left {
   color: white;
+  opacity: 1;
   width: 100%;
   border: solid 2px;
   display: block;
@@ -93,12 +98,12 @@ body {
 .admin-content {
   gap: 32px;
   width: 100%;
-  border: 1px solid grey;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   padding: 28px;
   border-radius: 16px;
   flex-direction: column;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .admin-hour {
   width: 100%;
@@ -324,10 +329,6 @@ body {
   }
   #i82pd {
     padding: 15px 0px 15px 0;
-  }
-  .btn.btn-primary.mt-2 {
-    width: 50%;
-    font-size: 16px;
   }
   .form-control {
     font-size: 12px;
