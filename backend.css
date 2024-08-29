@@ -57,6 +57,10 @@ body {
   border-radius: 8px;
   background-color: rgba(253, 252, 255, 0.05);
 }
+.form-control:focus {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(253, 252, 255, 0.05);
+}
 .update-button {
   gap: 8px;
   display: flex;
