@@ -9,18 +9,19 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'></link> 
     <link rel="stylesheet" href="./backend.css" />
-    <title>Simple Web Page</title>
+    <title>Escrow Admin Panel</title>
   </head>
   <body>
     <div class="gjs-row">
+      <div class="admin-title">ADMIN PANEL</div>
       <div id="iv94" class="gjs-cell">
-        <div class="admin-title">Admin Panel</div>
-        <div id="ic7p" class="gjs-rowin">
-          <div id="im5f" class="gjs-cellLeft">
+        <div id="ic7p" class="gjs-rowin d-flex flex-row align-items-start justify-content-between flex-wrap">
+          <div id="im5f" class="col-lg-5 gjs-cellLeft">
             <div class="admin-content">
               <div id="contractstate" class="time-line">
-                <div class="information w-half">
+                <div class="information">
                   <div class="title">Total Funds In Escrow:</div>
                   <div class="time-infor">
                     <div class="time">
@@ -31,7 +32,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="information w-half">
+                <div class="information">
                   <div class="title">EndDate:</div>
                   <div class="time-infor">
                     <div class="time">
@@ -99,7 +100,7 @@
                       id="start-date"
                       type="button"
                       data-form-name="startTime"
-                      class="btn btn-primary mt-2"
+                      class="btn btn-primary"
                     >
                       StartDate
                     </button>
@@ -114,7 +115,7 @@
                       id="end-date"
                       type="button"
                       data-form-name="endTime"
-                      class="btn btn-primary mt-2"
+                      class="btn btn-primary"
                     >
                       EndTime
                     </button>
@@ -128,7 +129,7 @@
                       id="total-amount"
                       type="button"
                       data-form-name="amount"
-                      class="btn btn-primary mt-2"
+                      class="btn btn-primary"
                     >
                       TotalfundsinEscrow
                     </button>
@@ -142,7 +143,7 @@
                       id="getchainId"
                       type="button"
                       data-form-name="getChainID"
-                      class="btn btn-primary mt-2"
+                      class="btn btn-primary"
                     >
                       Read
                     </button>
@@ -162,7 +163,7 @@
                   id="contract-address-button"
                   type="button"
                   data-form-name="getContractAddress"
-                  class="btn btn-primary mt-2_hidden"
+                  class="btn btn-primary hidden"
                 >
                   EscrowContracAddress
                 </button>
@@ -178,13 +179,13 @@
                   id="usdt-address-button"
                   type="button"
                   data-form-name="USDT"
-                  class="btn btn-primary mt-2_hidden"
+                  class="btn btn-primary hidden"
                 >
                   USDTAddress
                 </button>
               </div>
               <div class="update-button">
-                <div class="title">USDT Address</div>
+                <div class="title">Token Address</div>
                 <span
                   id="form-output-USDT-0"
                   data-form-name="USDT"
@@ -204,9 +205,9 @@
               </div>
             </div>
           </div>
-          <div id="i82pd" class="gjs-cellRight">
+          <div id="i82pd" class="col-lg-7 gjs-cellRight">
             <div class="admin-content">
-              <div class="depsit-title">Initialize your Escrow</div>
+              <div class="deposit-title">Initialize your Escrow</div>
               <div class="admin-deposit">
                 <div class="w-half">
                   <div class="update-button">
@@ -248,7 +249,7 @@
                       id="deposit-button"
                       type="button"
                       data-form-name="deposit"
-                      class="btn btn-primary mt-2_hidden"
+                      class="btn btn-primary hidden"
                     >
                       Deposit
                     </button>
@@ -256,7 +257,7 @@
                       id="decimal"
                       type="button"
                       onclick="getDecimals()"
-                      class="btn btn-primary mt-2_hidden"
+                      class="btn btn-primary hidden"
                     >
                       Decimal
                     </button>
@@ -268,14 +269,14 @@
                   id="depositToken-button"
                   type="button"
                   onclick="deposit()"
-                  class="btn btn-primary mt-2_left"
+                  class="btn btn-primary left"
                 >
                   Initiailize your Escrow
                 </button>
               </div>
             </div>
             <div class="admin-content">
-              <div class="depsit-title">Escrow Updates</div>
+              <div class="deposit-title">Escrow Updates</div>
               <div class="update-button">
                 <div class="title">Add amount</div>
                 <div class="content-flex">
@@ -296,12 +297,12 @@
                       class="form-control hidden"
                     />
                   </div>
-                  <div class="w-half">
+                  <div>
                     <button
                       id="increase-amount"
                       type="button"
                       data-form-name="addAmount"
-                      class="btn btn-primary mt-2_hidden"
+                      class="btn btn-primary hidden"
                     >
                       Add Amount
                     </button>
@@ -310,7 +311,7 @@
                       type="button"
                       onclick="addAmount()"
                       disabled
-                      class="btn btn-primary mt-2"
+                      class="btn btn-primary"
                     >
                       Increase Amount
                     </button>
@@ -336,12 +337,12 @@
                       class="form-control hidden"
                     />
                   </div>
-                  <div class="w-half">
+                  <div>
                     <button
                       id="increase-duration"
                       type="button"
                       data-form-name="addTime"
-                      class="btn btn-primary mt-2_hidden"
+                      class="btn btn-primary hidden"
                     >
                       Increase Duration
                     </button>
@@ -350,7 +351,7 @@
                       type="buton"
                       onclick="increasePeriod()"
                       disabled
-                      class="btn btn-primary mt-2"
+                      class="btn btn-primary"
                     >
                       Increase Duration
                     </button>
@@ -377,12 +378,12 @@
                       class="form-control hidden"
                     />
                   </div>
-                  <div class="w-half">
+                  <div>
                     <button
                       id="release-amount"
                       type="button"
                       data-form-name="release"
-                      class="btn btn-primary mt-2_hidden"
+                      class="btn btn-primary hidden"
                     >
                       Release
                     </button>
@@ -391,7 +392,7 @@
                       type="button"
                       onclick="releaseAmount()"
                       disabled
-                      class="btn btn-primary mt-2"
+                      class="btn btn-primary"
                     >
                       Release
                     </button>
@@ -401,7 +402,7 @@
                   id="refund-fund"
                   type="button"
                   data-form-name="refund"
-                  class="btn btn-primary mt-2_hidden"
+                  class="btn btn-primary hidden"
                 >
                   Refund
                 </button>
@@ -413,7 +414,7 @@
                 type="button"
                 onclick="refund()"
                 disabled
-                class="btn btn-primary mt-2_left"
+                class="btn btn-primary left"
               >
                 Refund
               </button>
