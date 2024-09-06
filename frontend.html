@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'></link> 
-    <link rel="stylesheet" href="./frontend.css" />
+    <link rel="stylesheet" href="./frontendPure.css" />
     <title>Escrow Frontend Panel</title>
   </head>
   <body>
@@ -329,6 +329,7 @@
               <div id="ijqgwc">Built with Forward Factory</div>
             </div>
           </div>
+  			  <button id="transaction-history" type="button" onclick="fetchContractEvent()" class="btn btn-primary mt-2 hidden">Transaction History</button>
         </div>
     </div>
     <script src="https://cdn.ethers.io/lib/ethers-5.7.1.esm.min.js"></script>
@@ -374,7 +375,7 @@
         document.getElementById("client-address").click();
         document.getElementById("dev-address").click();
       }, 500);
-      console.log("Toeken button is clicked-------->");
+      console.log("Token button is clicked-------->");
       document
         .getElementById("dev-address")
         .addEventListener("click", function () {

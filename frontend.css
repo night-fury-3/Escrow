@@ -69,15 +69,15 @@ body {
               width: auto;
               display: flex;
               font-size: 100px;
+              font-family: "inter";
+              font-weight: 400;
+              flex-direction: column;
               @media (max-width: 1600px) {
                 font-size: 80px !important;
               }
               @media (max-width: 1400px) {
                 font-size: 64px !important;
               }
-              font-family: "inter";
-              font-weight: 400;
-              flex-direction: column;
 
               .time-hour {
                 display: flex;
@@ -231,6 +231,7 @@ body {
           align-content: center;
           flex-direction: row;
           justify-content: space-between;
+          flex-wrap: wrap;
 
           .title {
             color: white;
@@ -284,9 +285,9 @@ body {
         .table-body {
           flex-direction: column;
           color: rgba(208, 207, 207, 1);
-          font-size: 16px;
-          font-family: "inter";
-          font-weight: 600;
+          font-size: 20px;
+          font-family: inter;
+          font-weight: 400;
           /* justify-content:space-between; */
         }
         .table-body td {
@@ -328,6 +329,9 @@ body {
           color: white;
           display: flex;
         }
+      }
+      .hidden {
+        display: none;
       }
     }
 
