@@ -27,7 +27,7 @@
                       <span id="form-total-amount" class="fm-control"
                         >Amount</span
                       >
-                      <span id="token-symbol" class="unit">USDT</span>
+                      <span id="token-symbol" class="unit">Token symbol</span>
                     </div>
                   </div>
                 </div>
@@ -38,7 +38,7 @@
                       <span id="form-released-amount" class="fm-control"
                         >Amount</span
                       >
-                      <span id="token-name" class="unit">USDT</span>
+                      <span id="token-name" class="unit">Token symbol</span>
                     </div>
                   </div>
                 </div>
@@ -629,6 +629,7 @@
         console.log("Duration : " + duration);
         document.getElementById("form-duration-_date").innerHTML = duration;
       }
+      //INFO: txsummary
       async function fetchContractEvent() {
         const abi = [
           {
