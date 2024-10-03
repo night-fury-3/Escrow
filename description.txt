@@ -1,0 +1,66 @@
+Secure transactions effortlessly with our customizable Escrow dApp template.
+
+
+Escrow:
+An agreement between two people or organizations in which money, property or assets are kept by a third entity until a particular condition is met.
+
+The Escrow Template provides a secure and reliable solution for managing payments between you the receiver. By holding funds in a smart contract until predefined conditions are met, it ensures that both parties fulfill their obligations, minimizing the risk of fraud and disputes. This template is ideal for freelance payments, real estate transactions, and any scenario where trust and security are paramount.
+
+Use-Cases
+Freelance Payments: Ensure freelancers get paid upon project completion and client satisfaction.
+Service Agreements: Facilitate secure payments for service-based agreements and contracts.
+Online Marketplaces: Safeguard transactions in online marketplaces to protect buyers and sellers.
+Real Estate Transactions: Secure payments during the sale of property until all conditions are met.
+
+Features:
+Customizable UI, add your own unique branding and identity before deployment
+User-Friendly Interface, Easy-to-use interface for both parties to manage and monitor escrow transactions
+Transparent transactions, recorded and viewable on the blockchain
+Multi-Currency support, any (ERC20) token can be used for payments, with $USDT being the default. ($USDC, $DAI or even $PEPE). *chain dependent 
+
+Step-by-Step Deployment Guide (using $USDT as an example ERC20 token. Any ERC20 token address can be used):
+Step 1, Customize Contract Page, 
+Add your application name
+Add the domain where you want your application to be deployed to
+in the ‘configure’ section
+Insert the wallet address of the person who will receive the payments
+Insert the $USDT contract address (only address, not full url) for the blockchain your are going to deploy on
+Ethereum $USDT contract address: https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7
+Binance $USDT contract address: https://bscscan.com/address/0x55d398326f99059ff775485246999027b3197955 
+Polygon $USDT contract address: https://polygonscan.com/token/0xc2132d05d31c914a87c6611c10748aeb04b58e8f 
+Arbitrum $USDT contract address: https://arbiscan.io/token/0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9 
+
+Step 2, Customize Front-End
+Make your desired UI customization by perhaps adding your own brand and identity to the front-end
+Step 3, Customize Admin Panel
+Best to leave this as it is, however any customization can be made. 
+Step 4, Preview
+Preview your customized UI and check that all details are correctly filled in
+Step 5, Deploy
+Select your preferred wallet
+Select the blockchain you want to deploy on (ensure it corresponds with the $USDT address inserted)
+Pay gas fees and wait for deployment
+
+Step-by-Step Usage Guide: Admin Panel
+Step 1
+Navigate to your Admin Panel domain through the ‘My Applications’ page by clicking on the ‘Admin’ button
+Step 2
+Insert your agreed upon deposit amount of $USDT tokens
+Insert the contract duration (period)
+Step 3
+At any time during the contract duration that you have set, you can release $USDT as payment for goods received or services rendered
+Insert the amount of $USDT that you want to release to pay the receiver
+Step 4
+At any time, you can increase the amount of $USDT in the Escrow to show the receiver that the funds are there and ready to be paid
+At any time, you can also increase the Escrow duration by setting the end date and time
+Step 5
+Only once the Escrow duration has expired, you are able to refund all your $USDT back to your wallet address
+The Escrow can be restarted after the contract has expired, by increasing the duration 
+Funds can also be release after the expiration.
+
+Step-by-Step Usage Guide: Front-End
+Step 1
+Navigate to the Front-end domain through the ‘My Applications’ page by clicking on the ‘Use’ button
+Step 2
+On the Front-end, you and the payment receiver can monitor the all Escrow details 
+Be sure to share this domain link with the payment receiver as well.
